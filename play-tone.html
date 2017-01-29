@@ -1,0 +1,34 @@
+<script>
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function tone(freq, dur) {
+	var audio = new AudioContext();
+	var osc = audio.createOscillator();
+	var gainNode = audio.createGain()
+	gainNode.gain.value = 0.2
+	osc.frequency.value = freq;
+	osc.type = "square";
+	osc.connect(gainNode);
+	gainNode.connect(audio.destination);
+	osc.start(0);
+	osc.stop(dur/1000);
+}
+
+async function playTones(){
+	tone(440, 2000);
+	await sleep(2000);
+	tone(450, 2000);
+}
+
+playTones();
+
+<!-- What I want is a playTone function which blocks execution until complete - as if using sleep in Python -->
+
+<!-- Usage would be for example: -->
+
+<!-- for (var i = 0; i < 10; i++){ -->
+	<!-- playTone(440 + 10 * i, 1000); -->
+<!-- } -->
+</script>

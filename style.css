@@ -1,0 +1,22 @@
+body{
+		background-color: pink !important;
+}
+
+.container{
+	padding: 0!important;
+	margin-top: 50px;
+	width: 400px!important;
+}
+
+#canvas-container{
+	padding: 0!important;
+	margin: 0!important;
+	background-color: black;
+}
+
+canvas{
+	padding: 0!important;
+	margin: 0!important;
+	border: 1px solid #564b47;
+	vertical-align: bottom!important;
+}
