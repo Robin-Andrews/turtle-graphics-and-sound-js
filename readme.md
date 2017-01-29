@@ -1,0 +1,2 @@
+# Turtle Graphics and Sound JS
+A project exploring the sonification of Turtle Graphics using the HTML5 Web Audio API and an implemtation of Turtle Graphics by Greg Reimer (<http://obadger.com/turtle/>)
